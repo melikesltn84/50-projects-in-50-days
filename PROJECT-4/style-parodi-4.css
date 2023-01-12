@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(90deg, #c93222, #e57814);
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.search {
+  display: flex;
+  gap: 5px;
+}
+
+.search input {
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease;
+}
+
+.search-btn .btn {
+  height: 50px;
+  width: 50px;
+}
+
+.btn:focus,
+input:focus {
+  outline: none;
+}
+
+.search.active input {
+  width: 200px;
+}

@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Permanent Marker", cursive;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: aliceblue;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+.split {
+  overflow: hidden;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+
+.split.left {
+  left: 0;
+  background: no-repeat center/cover
+    url("img/anime-manga-night-stars-star-kids-1532277-wallhere.com.png");
+}
+
+.split.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(57, 218, 218, 0.4);
+}
+
+.split.right {
+  right: 0;
+  background: no-repeat center/cover
+    url("img/JavaScript-Google-node-js-HTML-Microsoft-Visual-Studio-Python-programming-1790213-wallhere.com.jpg");
+}
+
+.split.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(167, 90, 196, 0.4);
+}
+
+h1 {
+  font-size: 35px;
+  color: aliceblue;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+  white-space: nowrap;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: white;
+  border: 3px solid #fff;
+  background-color: transparent;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 1.3rem;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+  text-transform: uppercase;
+}
+
+.split.left .btn:hover {
+  background-color: rgb(57, 218, 218);
+  border-color: transparent;
+}
+
+.split.right .btn:hover {
+  background-color: rgb(167, 90, 196);
+  border-color: transparent;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+
+.hover-left .right {
+  width: 25%;
+}
+
+.hover-left .right h1 {
+  font-size: 22px;
+}
+
+.hover-left .right .btn {
+  font-size: 15px;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-right .left {
+  width: 25%;
+}
+
+.hover-right .left h1 {
+  font-size: 22px;
+}
+
+.hover-right .left .btn {
+  font-size: 15px;
+}
+
+.split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+  transition: all 0.7s ease-in;
+}
