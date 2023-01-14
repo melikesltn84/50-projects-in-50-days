@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Secular One", sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: whitesmoke;
+  overflow: hidden;
+}
+
+.container {
+  border-radius: 10px;
+  padding: 30px 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 2px rgba(86, 83, 83, 0.6);
+}
+
+.container h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: rgb(107, 169, 169);
+  text-align: center;
+}
+
+.container a {
+  text-decoration: none;
+  color: rgb(107, 169, 169);
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  border: 0;
+  border-bottom: 2px solid #e8e8e8;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: #333;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: none;
+  border-bottom-color: #b4b0b0;
+  font-size: 16px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(107, 169, 169);
+  pad: 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  color: aliceblue;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.95);
+  background-color: cadetblue;
+}
+
+.text {
+  font-size: 11px;
+  margin: 15px;
+}
+
+.text a:hover {
+  text-decoration: underline;
+  color: darkcyan;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 16px;
+  max-width: 10px;
+  transition: 0.2s cubic-bezier(0.7, -0.6, 0.3, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: #999;
+  transform: translateY(-30px);
+}
